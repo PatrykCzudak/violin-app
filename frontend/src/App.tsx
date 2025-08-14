@@ -1,4 +1,5 @@
-import "./styles.css";
+import "./styles/reset.css";
+import "./styles/main.css";
 import AudioSourceSelector from "./components/AudioSourceSelector";
 import Tuner from "./components/Tuner";
 import ScoreView from "./components/ScoreView";
