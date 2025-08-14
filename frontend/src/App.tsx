@@ -1,3 +1,4 @@
+import "./styles/reset.css";
 import "./styles/main.css"; // ⬅️ styles z folderu src/styles
 import { useState } from "react";
 import PracticeTab from "./components/PracticeTab";
