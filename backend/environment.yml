@@ -1,0 +1,21 @@
+# environment.yml
+name: violin
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.11
+  - numpy
+  - aubio
+  - sounddevice
+  - soundfile
+  - libsndfile
+  - portaudio
+  - music21
+  - mido
+  - pretty_midi
+  - pip
+  - pip:
+      - fastapi
+      - "uvicorn[standard]"
+      - python-multipart

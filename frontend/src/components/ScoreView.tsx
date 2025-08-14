@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { uploadScore, MEDIA_BASE } from "../api";
 import type { UploadResponse } from "../types";
-import { OpenSheetMusicDisplay } from "opensheetmusicdisplay";
+import OpenSheetMusicDisplay from 'opensheetmusicdisplay/build/opensheetmusicdisplay.min.js';
 
 export default function ScoreView() {
   const [info, setInfo] = useState<UploadResponse | null>(null);
