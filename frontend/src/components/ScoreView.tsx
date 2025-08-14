@@ -36,7 +36,7 @@ export default function ScoreView() {
     <div className="card vstack">
       <h1>Partytura (MusicXML)</h1>
       <input type="file" accept=".xml,.mxl,.musicxml,.mid,.midi" onChange={onUpload} />
-      <div ref={containerRef} style={{ background:"#0e1733", border:"1px solid #223060", borderRadius:8, padding:8 }}/>
+      <div ref={containerRef} style={{ background:"#ffffffff", border:"1px solid #000000ff", borderRadius:8, padding:8 }}/>
     </div>
   );
 }

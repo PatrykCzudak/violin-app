@@ -25,11 +25,16 @@ export function wsUrlAnalyze() {
   return `ws://localhost:8000/api/audio/ws/analyze`;
 }
 
-export async function uploadScore(file: File) {
+export async function uploadScore(file: File): Promise<{ url: string }> {
   const fd = new FormData();
-  fd.append("file", file);
-  const res = await fetch(`${BASE}/api/score/upload`, { method: "POST", body: fd });
-  if (!res.ok) throw new Error("Upload failed");
+  fd.append("file", file, file.name);
+  const res = await fetch(`${BASE}/api/score/upload`, {
+    method: "POST",
+    body: fd,
+  });
+  if (!res.ok) {
+    throw new Error(`Upload failed: ${res.status}`);
+  }
   return res.json();
 }
 
